@@ -5,28 +5,31 @@
 int main(){
     char function;
     float variable[20], result;
-    printf("Please type \n A: For Addition \n S: For Substraction \n M: For Multiplication \n D: For Division\n");
-    scanf("%c",&function);
+
     printf("First Variable:");
     scanf("%f",&variable[0]);
+    printf("Please type \n + : For Addition \n - : For Substraction \n x : For Multiplication \n / : For Division\n:");
+    scanf("%c",&function);
+    function = getchar();
+    
     printf("\nSecond Variable:");
     scanf("%f",&variable[1]);
 
     switch (function)
     {
-    case 'A':
+    case '+':
         result = variable[0] + variable [1];
         break;
     
-    case 'S':
+    case '-':
         result = variable[0] - variable [1];
         break;
     
-    case 'M':
+    case 'x':
         result = variable[0] * variable [1];
         break;
 
-    case 'D':
+    case '/':
         result = variable[0] * 1/variable [1];
         break;
     }
